@@ -16,11 +16,10 @@ public class DevToStepsDefinitions {
     @Before
     public void setup(){
         System.setProperty("webdriver.chrome.driver","C:\\SDA\\BDD\\src\\main\\resources\\chromedriver.exe");
+        driver = new ChromeDriver();
     }
 
-    @Given("Chrome browser in open")
-    public void chrome_browser_in_open() { driver = new ChromeDriver(); }
-    @When("I go de devto main page")
+    @Given("I go de devto main page")
     public void i_go_de_devto_main_page() {
       driver.get("https://dev.to");
     }
